@@ -1,15 +1,22 @@
 import { useContext } from "react";
 import { cartContext } from "./Pages";
-import React from "react";
 
-export default function AddBtn() {
+export default function AddBtn({ itemId }) {
   const { setCount } = useContext(cartContext);
-  console.log("🚀 ~ setCount:", setCount);
 
   return (
     <>
       <span>
-        <button onClick={() => setCount((prev) => prev + 1)}>add</button>
+        <button
+          onClick={() =>
+            setCount((prev) => ({
+              ...prev,
+              [itemId]: (prev[itemId] || 0) + 1,
+            }))
+          }
+        >
+          add
+        </button>
       </span>
     </>
   );

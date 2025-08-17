@@ -1,10 +1,10 @@
 import AddBtn from "./AddBtn";
 
-export default function Item() {
+export default function Item({ item }) {
   return (
     <div>
-      <span>item</span>
-      <AddBtn />
+      <span>{item.name}</span>
+      <AddBtn itemId={item.id} />
     </div>
   );
 }
