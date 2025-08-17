@@ -1,11 +1,10 @@
-import React from 'react'
-import Cart from './Cart'
+import Cart from "./Cart";
 
 export default function NavBar() {
   return (
     <>
-    <h2>nav Bar</h2>
-    <Cart />
+      <h2>nav Bar</h2>
+      <Cart />
     </>
-  )
+  );
 }
