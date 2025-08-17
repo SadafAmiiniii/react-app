@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { cartContext } from "./Pages";
-import React from "react";
 
 export default function Cart() {
   const { count } = useContext(cartContext);
@@ -8,7 +7,7 @@ export default function Cart() {
 
   return (
     <div>
-      🛒 Cart: {totalItems} items
+      Cart: {totalItems} items
       <div>
         {Object.entries(count).map(([itemId, itemCount]) => (
           <div key={itemId}>
